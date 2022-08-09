@@ -1,8 +1,7 @@
 <?php
 include('dbConnection.php');
-$data = stripcslashes(file_get_contents("php://input")); // getting raw data.
-$mydata = json_decode($data,true); // raw data ko json data me conver krna.
-$id = $mydata['sid'];
+$data = stripcslashes(file_get_contents("php://input")); 
+$mydata = json_decode($data,true); 
 
 //deletenig
 if(!empty($id)){
