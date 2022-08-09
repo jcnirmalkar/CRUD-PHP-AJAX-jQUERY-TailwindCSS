@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+
+
+          .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+  .btn-blue-pill {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full;
+  }
+  .btn-kk {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-normal py-0.5 px-3 rounded-full;
+  }
+        }
+      </style>
+</head>
+
+<body>
+
+    <!-- start project -->
+
+    <!-- main div -->
+    <div class="p-6 w-12/12  ">
+        <!-- heading -->
+        <div class=" bg-th2  text-center text-white  p-2  sticky top-0 ">
+            <h1 class="text-3xl font-bold">
+                simple crud app with datatable and ajax
+            </h1>
+        </div>
+        <!-- heading end -->
+        <!-- tble div heading ke niche ka all div -->
+        <div class="flex mt-1  ">
+
+            <!-- *************************left****************************** -->
+            <div class="bg-th2 bg-opacity-70 h-screen w-4/12 mr-1 ">
+                <h1 class="p-2 text-white font-bold text-center  bg-slate-700 text-xl  ">Add-Update
+                </h1>
+                <div class="p-2 ">
+                    <form action="" class="" id="myform">
+                        <input type="text" class="hidden" id="stid">
+                        <!-- input section div name -->
+                        <div class="grid ">
+                            <label for="nameid" class="font-medium text-sm">Name</label>
+                            <input type="text" class="form-control h-3/4  font-medium" id="nameid">
+                        </div>
+
+                        <!-- input section div email -->
+                        <div class="grid">
+                            <label for="emailid" class="form-lable font-medium  text-sm">Email</label>
+
+                            <input type="email" class="form-control h-3/4  font-medium" id="emailid">
+                        </div>
+
+                        <!-- input section div password -->
+                        <div class="grid">
+                            <label for="nameid" class="form-lable font-medium  text-sm">Password</label>
+
+                            <input type="password" class="form-control h-3/4 " id="passwordid">
+                        </div>
+
+                        <!-- button -->
+                        <button type="submit" id="btnadd" class="btn-blue-pill mt-2">Save</button>
+
+                        <!-- operation msg -->
+                        <div class="text-yellow-400 font-bold p-2 mt-2" id="msg"></div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- **********************************right********************************* -->
+            <!-- div right -->
+            <div class="bg-th2 bg-opacity-70 h-screen w-8/12 ml-1 text-center  ">
+                <h3 class="p-2 text-white font-bold bg-slate-700 text-xl  "> Show Information</h3>
+                <div class="p-1 ">
+                    <table class=" p-2 w-full ">
+                        <thead class=" bg-gray-50 border-b-2 border-gray-200 ">
+                            <tr>
+                                <th class="w-20" scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody" class="text-white">
+                            <tr>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- **************************************right end **************************************** -->
+
+
+
+
+
+
+    <!-- end project -->
+
+    <!-- jqery script -->
+    <script src="js/jquery.js"></script>
+    <script src="ajax.js"></script>
+
+    <!-- tailwind css script -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        gcolor: '#14532d',
+                        th1: '#9ca3af',
+                        th2: '#3730a3',
+                        th3: '#0f766e',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- tailwind css -->
+
+</body>
+
+</html>
